@@ -49,7 +49,7 @@ const PostStatusForm = {
       newStatus: {
         status: statusText,
         files: [],
-        visibility: 'public'
+        visibility: null
       },
       caret: 0
     }
@@ -57,7 +57,7 @@ const PostStatusForm = {
   computed: {
     vis () {
       return {
-        public: { selected: this.newStatus.visibility === 'public' },
+        public: { selected: !this.newStatus.visibility || this.newStatus.visibility === 'public' },
         unlisted: { selected: this.newStatus.visibility === 'unlisted' },
         private: { selected: this.newStatus.visibility === 'private' },
         direct: { selected: this.newStatus.visibility === 'direct' }
