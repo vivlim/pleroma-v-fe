@@ -88,7 +88,7 @@ const de = {
   login: {
     login: 'Anmelden',
     username: 'Benutzername',
-    placeholder: 'z.B. lain',
+    placeholder: 'z.B. zero_cool',
     password: 'Passwort',
     register: 'Registrieren',
     logout: 'Abmelden'
@@ -185,7 +185,7 @@ const fi = {
   login: {
     login: 'Kirjaudu sisään',
     username: 'Käyttäjänimi',
-    placeholder: 'esim. lain',
+    placeholder: 'esim. zero_cool',
     password: 'Salasana',
     register: 'Rekisteröidy',
     logout: 'Kirjaudu ulos'
@@ -316,7 +316,7 @@ const en = {
   login: {
     login: 'Log in',
     username: 'Username',
-    placeholder: 'e.g. lain',
+    placeholder: 'e.g. zero_cool',
     password: 'Password',
     register: 'Register',
     logout: 'Log out'
@@ -331,7 +331,7 @@ const en = {
   post_status: {
     posting: 'Posting',
     content_warning: 'Content warning (optional)',
-    default: 'Just landed in L.A.'
+    default: 'whaaat\'s up gamers i\'m here with slap chop'
   },
   finder: {
     find_user: 'Find user',
@@ -437,7 +437,7 @@ const eo = {
   login: {
     login: 'Saluti',
     username: 'Salutnomo',
-    placeholder: 'ekz. lain',
+    placeholder: 'ekz. zero_cool',
     password: 'Pasvorto',
     register: 'Registriĝi',
     logout: 'Adiaŭi'
@@ -525,7 +525,7 @@ const et = {
   login: {
     login: 'Logi sisse',
     username: 'Kasutajanimi',
-    placeholder: 'nt lain',
+    placeholder: 'nt zero_cool',
     password: 'Parool',
     register: 'Registreeru',
     logout: 'Logi välja'
@@ -609,7 +609,7 @@ const hu = {
   login: {
     login: 'Bejelentkezés',
     username: 'Felhasználó név',
-    placeholder: 'e.g. lain',
+    placeholder: 'e.g. zero_cool',
     password: 'Jelszó',
     register: 'Feliratkozás',
     logout: 'Kijelentkezés'
@@ -693,7 +693,7 @@ const ro = {
   login: {
     login: 'Loghează',
     username: 'Nume utilizator',
-    placeholder: 'd.e. lain',
+    placeholder: 'd.e. zero_cool',
     password: 'Parolă',
     register: 'Înregistrare',
     logout: 'Deloghează'
@@ -809,7 +809,7 @@ const ja = {
   login: {
     login: 'ログイン',
     username: 'ユーザー名',
-    placeholder: '例えば lain',
+    placeholder: '例えば zero_cool',
     password: 'パスワード',
     register: '登録',
     logout: 'ログアウト'
@@ -938,7 +938,7 @@ const fr = {
   login: {
     login: 'Connexion',
     username: 'Identifiant',
-    placeholder: 'p.e. lain',
+    placeholder: 'p.e. zero_cool',
     password: 'Mot de passe',
     register: 'S\'inscrire',
     logout: 'Déconnexion'
@@ -1117,7 +1117,7 @@ const oc = {
   login: {
     login: 'Connexion',
     username: 'Nom d’utilizaire',
-    placeholder: 'e.g. lain',
+    placeholder: 'e.g. zero_cool',
     password: 'Senhal',
     register: 'Se marcar',
     logout: 'Desconnexion'
@@ -1251,7 +1251,7 @@ const pl = {
   login: {
     login: 'Zaloguj',
     username: 'Użytkownik',
-    placeholder: 'n.p. lain',
+    placeholder: 'n.p. zero_cool',
     password: 'Hasło',
     register: 'Zarejestruj',
     logout: 'Wyloguj'
@@ -1355,7 +1355,7 @@ const es = {
   login: {
     login: 'Identificación',
     username: 'Usuario',
-    placeholder: 'p.ej. lain',
+    placeholder: 'p.ej. zero_cool',
     password: 'Contraseña',
     register: 'Registrar',
     logout: 'Salir'
@@ -1456,7 +1456,7 @@ const pt = {
   login: {
     login: 'Entrar',
     username: 'Usuário',
-    placeholder: 'p.e. lain',
+    placeholder: 'p.e. zero_cool',
     password: 'Senha',
     register: 'Registrar',
     logout: 'Sair'
@@ -1574,7 +1574,7 @@ const ru = {
   login: {
     login: 'Войти',
     username: 'Имя пользователя',
-    placeholder: 'e.c. lain',
+    placeholder: 'e.c. zero_cool',
     password: 'Пароль',
     register: 'Зарегистрироваться',
     logout: 'Выйти'
@@ -1693,7 +1693,7 @@ const nb = {
   login: {
     login: 'Logg inn',
     username: 'Brukernavn',
-    placeholder: 'f. eks lain',
+    placeholder: 'f. eks zero_cool',
     password: 'Passord',
     register: 'Registrer',
     logout: 'Logg ut'
