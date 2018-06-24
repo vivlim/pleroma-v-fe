@@ -1,6 +1,6 @@
 {
   "theme": "pleroma-dark",
-  "background": "/static/aurora_borealis.jpg",
+  "background": "/static/windows_xp_bliss.jpg",
   "logo": "/static/logo.png",
   "redirectRootNoLogin": "/main/all",
   "redirectRootLogin": "/main/friends",
@@ -10,6 +10,6 @@
   "whoToFollowProviderDummy2": "https://followlink.osa-p.net/api/get_recommend.json?acct=@{{user}}@{{host}}",
   "whoToFollowLink": "https://vinayaka.distsn.org/?{{host}}+{{user}}",
   "whoToFollowLinkDummy2": "https://followlink.osa-p.net/recommend.html",
-  "showInstanceSpecificPanel": false,
+  "showInstanceSpecificPanel": true,
   "scopeOptionsEnabled": true
 }
