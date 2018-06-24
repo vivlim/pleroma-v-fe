@@ -23,6 +23,11 @@ rm('-rf', assetsPath)
 mkdir('-p', assetsPath)
 cp('-R', 'static/*', assetsPath)
 
+var instanceSpecificPath = path.join(config.build.assetsRoot, "instance")
+rm('-rf', instanceSpecificPath)
+mkdir('-p', instanceSpecificPath)
+cp('-R', 'instance/*', instanceSpecificPath)
+
 webpack(webpackConfig, function (err, stats) {
   spinner.stop()
   if (err) throw err
