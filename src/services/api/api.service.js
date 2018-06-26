@@ -8,6 +8,7 @@ const TAG_TIMELINE_URL = '/api/statusnet/tags/timeline'
 const FAVORITE_URL = '/api/favorites/create'
 const UNFAVORITE_URL = '/api/favorites/destroy'
 const RETWEET_URL = '/api/statuses/retweet'
+const UNRETWEET_URL = '/api/statuses/unretweet'
 const STATUS_UPDATE_URL = '/api/statuses/update.json'
 const STATUS_DELETE_URL = '/api/statuses/destroy'
 const STATUS_URL = '/api/statuses/show'
@@ -32,6 +33,9 @@ const USER_URL = '/api/users/show.json'
 const FOLLOW_IMPORT_URL = '/api/pleroma/follow_import'
 const DELETE_ACCOUNT_URL = '/api/pleroma/delete_account'
 const CHANGE_PASSWORD_URL = '/api/pleroma/change_password'
+const FOLLOW_REQUESTS_URL = '/api/pleroma/friend_requests'
+const APPROVE_USER_URL = '/api/pleroma/friendships/approve'
+const DENY_USER_URL = '/api/pleroma/friendships/deny'
 
 import { each, map } from 'lodash'
 import 'whatwg-fetch'
@@ -127,11 +131,13 @@ const updateBanner = ({credentials, params}) => {
 const updateProfile = ({credentials, params}) => {
   let url = PROFILE_UPDATE_URL
 
+  console.log(params)
+
   const form = new FormData()
 
   each(params, (value, key) => {
-    if (key === 'description' || /* Always include description, because it might be empty */
-        value) {
+    /* Always include description and locked, because it might be empty or false */
+    if (key === 'description' || key === 'locked' || value) {
       form.append(key, value)
     }
   })
@@ -216,6 +222,22 @@ const unblockUser = ({id, credentials}) => {
   }).then((data) => data.json())
 }
 
+const approveUser = ({id, credentials}) => {
+  let url = `${APPROVE_USER_URL}?user_id=${id}`
+  return fetch(url, {
+    headers: authHeaders(credentials),
+    method: 'POST'
+  }).then((data) => data.json())
+}
+
+const denyUser = ({id, credentials}) => {
+  let url = `${DENY_USER_URL}?user_id=${id}`
+  return fetch(url, {
+    headers: authHeaders(credentials),
+    method: 'POST'
+  }).then((data) => data.json())
+}
+
 const fetchUser = ({id, credentials}) => {
   let url = `${USER_URL}?user_id=${id}`
   return fetch(url, { headers: authHeaders(credentials) })
@@ -236,6 +258,12 @@ const fetchFollowers = ({id, credentials}) => {
 
 const fetchAllFollowing = ({username, credentials}) => {
   const url = `${ALL_FOLLOWING_URL}/${username}.json`
+  return fetch(url, { headers: authHeaders(credentials) })
+    .then((data) => data.json())
+}
+
+const fetchFollowRequests = ({credentials}) => {
+  const url = FOLLOW_REQUESTS_URL
   return fetch(url, { headers: authHeaders(credentials) })
     .then((data) => data.json())
 }
@@ -326,6 +354,13 @@ const unfavorite = ({ id, credentials }) => {
 
 const retweet = ({ id, credentials }) => {
   return fetch(`${RETWEET_URL}/${id}.json`, {
+    headers: authHeaders(credentials),
+    method: 'POST'
+  })
+}
+
+const unretweet = ({ id, credentials }) => {
+  return fetch(`${UNRETWEET_URL}/${id}.json`, {
     headers: authHeaders(credentials),
     method: 'POST'
   })
@@ -428,6 +463,7 @@ const apiService = {
   favorite,
   unfavorite,
   retweet,
+  unretweet,
   postStatus,
   deleteStatus,
   uploadMedia,
@@ -442,7 +478,10 @@ const apiService = {
   externalProfile,
   followImport,
   deleteAccount,
-  changePassword
+  changePassword,
+  fetchFollowRequests,
+  approveUser,
+  denyUser
 }
 
 export default apiService

@@ -48,7 +48,8 @@ const de = {
     settings: 'Einstellungen',
     theme: 'Farbschema',
     presets: 'Voreinstellungen',
-    theme_help: 'Benutze HTML Farbcodes (#rrggbb) um dein Farbschema anzupassen.',
+    theme_help: 'Benutze HTML Farbcodes (#rrggbb) um dein Farbschema anzupassen',
+    radii_help: 'Kantenrundung (in Pixel) der Oberfläche anpassen',
     background: 'Hintergrund',
     foreground: 'Vordergrund',
     text: 'Text',
@@ -58,6 +59,7 @@ const de = {
     cOrange: 'Orange (Favorisieren)',
     cGreen: 'Grün (Retweet)',
     btnRadius: 'Buttons',
+    inputRadius: 'Eingabefelder',
     panelRadius: 'Panel',
     avatarRadius: 'Avatare',
     avatarAltRadius: 'Avatare (Benachrichtigungen)',
@@ -76,7 +78,20 @@ const de = {
     follow_import: 'Folgeliste importieren',
     import_followers_from_a_csv_file: 'Importiere Kontakte, denen du folgen möchtest, aus einer CSV-Datei',
     follows_imported: 'Folgeliste importiert! Die Bearbeitung kann eine Zeit lang dauern.',
-    follow_import_error: 'Fehler beim importieren der Folgeliste'
+    follow_import_error: 'Fehler beim importieren der Folgeliste',
+    delete_account: 'Account löschen',
+    delete_account_description: 'Lösche deinen Account und alle deine Nachrichten dauerhaft.',
+    delete_account_instructions: 'Tippe dein Passwort unten in das Feld ein um die Löschung deines Accounts zu bestätigen.',
+    delete_account_error: 'Es ist ein Fehler beim löschen deines Accounts aufgetreten. Tritt dies weiterhin auf, wende dich an den Administrator der Instanz.',
+    follow_export: 'Folgeliste exportieren',
+    follow_export_processing: 'In Bearbeitung. Die Liste steht gleich zum herunterladen bereit.',
+    follow_export_button: 'Liste (.csv) erstellen',
+    change_password: 'Passwort ändern',
+    current_password: 'Aktuelles Passwort',
+    new_password: 'Neues Passwort',
+    confirm_new_password: 'Neues Passwort bestätigen',
+    changed_password: 'Passwort erfolgreich geändert!',
+    change_password_error: 'Es gab ein Problem bei der Änderung des Passworts.'
   },
   notifications: {
     notifications: 'Benachrichtigungen',
@@ -102,7 +117,16 @@ const de = {
   },
   post_status: {
     posting: 'Veröffentlichen',
-    default: 'Sitze gerade im Hofbräuhaus.'
+    default: 'Sitze gerade im Hofbräuhaus.',
+    account_not_locked_warning: 'Dein Profil ist nicht {0}. Wer dir folgen will, kann das jederzeit tun und dann auch deine privaten Beiträge sehen.',
+    account_not_locked_warning_link: 'gesperrt',
+    direct_warning: 'Dieser Beitrag wird nur für die erwähnten Nutzer sichtbar sein.',
+    scope: {
+      public: 'Öffentlich - Beitrag an öffentliche Zeitleisten',
+      unlisted: 'Nicht gelistet - Nicht in öffentlichen Zeitleisten anzeigen',
+      private: 'Nur Folgende - Beitrag nur an Folgende',
+      direct: 'Direkt - Beitrag nur an erwähnte Profile'
+    }
   },
   finder: {
     find_user: 'Finde Benutzer',
@@ -220,7 +244,8 @@ const en = {
     timeline: 'Timeline',
     mentions: 'Mentions',
     public_tl: 'Public Timeline',
-    twkn: 'The Whole Known Network'
+    twkn: 'The Whole Known Network',
+    friend_requests: 'Follow Requests'
   },
   user_card: {
     follows_you: 'Follows you!',
@@ -234,7 +259,9 @@ const en = {
     followers: 'Followers',
     followees: 'Following',
     per_day: 'per day',
-    remote_follow: 'Remote follow'
+    remote_follow: 'Remote follow',
+    approve: 'Approve',
+    deny: 'Deny'
   },
   timeline: {
     show_new: 'Show new',
@@ -304,7 +331,8 @@ const en = {
     new_password: 'New password',
     confirm_new_password: 'Confirm new password',
     changed_password: 'Password changed successfully!',
-    change_password_error: 'There was an issue changing your password.'
+    change_password_error: 'There was an issue changing your password.',
+    lock_account_description: 'Restrict your account to approved followers only'
   },
   notifications: {
     notifications: 'Notifications',
@@ -331,7 +359,16 @@ const en = {
   post_status: {
     posting: 'Posting',
     content_warning: 'Content warning (optional)',
-    default: 'whaaat\'s up gamers i\'m here with slap chop'
+    default: 'whaaat\'s up gamers i\'m here with slap chop',
+    account_not_locked_warning: 'Your account is not {0}. Anyone can follow you to view your follower-only posts.',
+    account_not_locked_warning_link: 'locked',
+    direct_warning: 'This post will only be visible to all the mentioned users.',
+    scope: {
+      public: 'Public - Post to public timelines',
+      unlisted: 'Unlisted - Do not post to public timelines',
+      private: 'Followers-only - Post to followers only',
+      direct: 'Direct - Post to mentioned users only'
+    }
   },
   finder: {
     find_user: 'Find user',
@@ -885,7 +922,7 @@ const fr = {
     settings: 'Paramètres',
     theme: 'Thème',
     filtering: 'Filtre',
-    filtering_explanation: 'Tout les statuts contenant ces mots seront masqués. Un mot par ligne.',
+    filtering_explanation: 'Tous les statuts contenant ces mots seront masqués. Un mot par ligne.',
     attachments: 'Pièces jointes',
     hide_attachments_in_tl: 'Masquer les pièces jointes dans le journal',
     hide_attachments_in_convo: 'Masquer les pièces jointes dans les conversations',
@@ -894,7 +931,7 @@ const fr = {
     reply_link_preview: 'Afficher un aperçu lors du survol de liens vers une réponse',
     presets: 'Thèmes prédéfinis',
     theme_help: 'Spécifiez des codes couleur hexadécimaux (#aabbcc) pour personnaliser les couleurs du thème',
-    background: 'Arrière plan',
+    background: 'Arrière-plan',
     foreground: 'Premier plan',
     text: 'Texte',
     links: 'Liens',
@@ -905,7 +942,7 @@ const fr = {
     follow_import_error: 'Erreur lors de l\'importation des abonnements.',
     follow_export: 'Exporter les abonnements',
     follow_export_button: 'Exporter les abonnements en csv',
-    follow_export_processing: 'Exportation en cours...',
+    follow_export_processing: 'Exportation en cours…',
     cBlue: 'Bleu (Répondre, suivre)',
     cRed: 'Rouge (Annuler)',
     cOrange: 'Orange (Aimer)',
@@ -952,7 +989,16 @@ const fr = {
   },
   post_status: {
     posting: 'Envoi en cours',
-    default: 'Écrivez ici votre prochain statut.'
+    default: 'Écrivez ici votre prochain statut.',
+    account_not_locked_warning: 'Votre compte n’est pas {0}. N’importe qui peut vous suivre pour voir vos billets en Abonné·e·s uniquement.',
+    account_not_locked_warning_link: 'verrouillé',
+    direct_warning: 'Ce message sera visible à toutes les personnes mentionnées.',
+    scope: {
+      public: 'Publique - Afficher dans les fils publics',
+      unlisted: 'Non-Listé - Ne pas afficher dans les fils publics',
+      private: 'Abonné·e·s uniquement - Seul·e·s vos abonné·e·s verront vos billets',
+      direct: 'Direct - N’envoyer qu’aux personnes mentionnées'
+    }
   },
   finder: {
     find_user: 'Chercher un utilisateur',
@@ -1562,7 +1608,20 @@ const ru = {
     follow_import: 'Импортировать читаемых',
     import_followers_from_a_csv_file: 'Импортировать читаемых из файла .csv',
     follows_imported: 'Список читаемых импортирован. Обработка займёт некоторое время..',
-    follow_import_error: 'Ошибка при импортировании читаемых.'
+    follow_import_error: 'Ошибка при импортировании читаемых.',
+    delete_account: 'Удалить аккаунт',
+    delete_account_description: 'Удалить ваш аккаунт и все ваши сообщения.',
+    delete_account_instructions: 'Введите ваш пароль в поле ниже для подтверждения удаления.',
+    delete_account_error: 'Возникла ошибка в процессе удаления вашего аккаунта. Если это повторяется, свяжитесь с администратором вашего сервера.',
+    follow_export: 'Экспортировать читаемых',
+    follow_export_processing: 'Ведётся обработка, скоро вам будет предложено загрузить файл',
+    follow_export_button: 'Экспортировать читаемых в файл .csv',
+    change_password: 'Сменить пароль',
+    current_password: 'Текущий пароль',
+    new_password: 'Новый пароль',
+    confirm_new_password: 'Подтверждение нового пароля',
+    changed_password: 'Пароль изменён успешно.',
+    change_password_error: 'Произошла ошибка при попытке изменить пароль.'
   },
   notifications: {
     notifications: 'Уведомления',
@@ -1827,6 +1886,7 @@ const he = {
   login: {
     login: 'התחבר',
     username: 'שם המשתמש',
+    placeholder: 'למשל lain',
     password: 'סיסמה',
     register: 'הירשם',
     logout: 'התנתק'
